@@ -1,0 +1,32 @@
+Web Development:
+
+1) frontend
+2) backend
+3) full-stack
+
+
+1)frontend:
+
+-- html
+-- css
+-- js
+
+
+html --> static data
+
+css --> static data style provide
+
+js --> dynamic data
+
+
+Css : ways to write --> inline,internal and external css
+
+js : 1) inline ==> script attribute
+     2) internal ==> script tag
+     3) external ==> .js extetion file
+
+
+web browser :
+
+1) document object
+2) window object
