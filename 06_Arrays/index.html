@@ -37,18 +37,84 @@
 
     // Primitive datatypes : string,number,bigint,boolean
 
-    // reference datatype : function , array and object 
-    //-------------------------------------------------------------------------------------------- copy of array
-    let arr = ['helo', 'good', 'morning'];
+    // // reference datatype : function , array and object 
+    // //-------------------------------------------------------------------------------------------- copy of array
+    // let arr = ['helo', 'good', 'morning'];
 
-    let arr1 = [...arr] ; // arr reference // ... spread operator
+    // let arr1 = [...arr] ; // arr reference // ... spread operator
 
-    arr1.push('how are you?');
+    // arr1.push('how are you?');
 
-    console.log(arr);
-    console.log(arr1);
+    // console.log(arr);
+    // console.log(arr1);
 
-    console.log(...arr); // to spread out element from array and object
+    // console.log(...arr); // to spread out element from array and object
+
+    // ------------------------------------------------------------------------------------------- shallow and deep copy
+
+    // shallow copy :- object memory reference pass copy
+    //  0   1    2      3
+    // let arr = ['1', '2', '3',['4' , '5' ,'6',['7','8']]];
+    // let arr1 = arr ; // arr reference pass // (... spread operator) // output : ['1', '2', '3', Array(4), '7']
+
+
+
+    // let arr1 = [...arr];
+
+    // arr1.push('7');
+
+    // console.log(arr);
+    // console.log(arr1); 
+
+    // console.log(...arr);    
+
+    // --------------------------------------------------------------------------------------------- spread operator in object
+
+
+    // let obj = {
+    //     name : 'royal', // key : value pairs
+    //     address : 'gandhinagar'
+    // }
+
+    // let obj1 = {...obj}
+
+    // console.log(obj);
+    // console.log(obj1);
+
+
+    //---------------------------------------------------------------------------------------------- array using const
+
+    // let arr;
+    // arr = ['1','2'];
+
+    // const arr = ['1','2','3'] 
+
+    // ---------------------------------------------------------------------------------------------- for loop in array
+
+    // let array = ['1','2','3']
+
+    // for (let i = 0; i < array.length; i++) {
+    //     const element = array[i];
+    //     console.log('element of array :',element);
+    // }
+
+    // ---------------------------------------------------------------------------------------------- for Each in array
+
+    // let array = ['1','2','3'] //spread  array value
+
+    // array.forEach(function (value){
+    //     console.log('array :',value);
+    // })
+
+    // --------------------------------------------------------------------------------------------- array from user choice
+
+    // let size = parseInt(prompt('Enter the size of array :'));
+    // let arr = [];
+    // for (let i = 0; i < size; i++) {
+    //     let element =  parseInt(prompt('Enter the value of array :'));
+    //     arr.push(element);
+    // }
+
 
 </script>
 
