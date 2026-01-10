@@ -41,7 +41,6 @@
 //     console.log("multiplication:",a*b);
 // }
 
-
 // mul(5,10);
 
 //---------------------------------------------------------
@@ -50,7 +49,6 @@
 // function division(a,b){
 //     return a / b;
 // }
-
 
 // let div = division(10,2);
 // console.log("Division :",div);
@@ -61,18 +59,40 @@ Task : Check Character Exists
 Write a function that checks whether a given character exists in a string
 */
 
+// let str = "Royal";
 
-let str = 'Royal';
+// function check(string, char) {
+//   for (let i = 0; i < string.length; i++) {
+//     const element = string[i];
+//     if (char == element) {
+//       console.log("Char at index no. :", i);
+//     } else {
+//       console.log("char not find");
+//     }
+//   }
+// }
 
-function check(string,char){
-    for (let i = 0; i < string.length; i++) {
-        const element = string[i];
-        if (char == element) {
-            console.log("Char at index no. :",i);
-        }else{
-            console.log("char not find");
-        }
-    }
+// check(str, "a");
+//-------------------------------------------------------------------------
+/*
+Rotate array by 1 position (right)
+Input: [1, 2, 3, 4] Output: [4, 1, 2, 3]
+
+*/
+
+function Shift(arr) {
+  let n = arr.length - 1;
+
+  let last = arr[arr.length - 1];
+  for (let i = n; i > 0; i--) {
+    arr[i] = arr[i - 1];
+  }
+
+  arr[0] = last;
+  return arr;
 }
 
-check(str,'a');
+
+let newArr = Shift([1, 2, 3, 4 , 5]);
+
+console.log(newArr);
