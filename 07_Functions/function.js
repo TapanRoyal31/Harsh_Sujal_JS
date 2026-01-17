@@ -80,19 +80,48 @@ Input: [1, 2, 3, 4] Output: [4, 1, 2, 3]
 
 */
 
-function Shift(arr) {
-  let n = arr.length - 1;
+// function Shift(arr) {
+//   let n = arr.length - 1;
 
-  let last = arr[arr.length - 1];
-  for (let i = n; i > 0; i--) {
-    arr[i] = arr[i - 1];
+//   let last = arr[arr.length - 1];
+//   for (let i = n; i > 0; i--) {
+//     arr[i] = arr[i - 1];
+//   }
+
+//   arr[0] = last;
+//   return arr;
+// }
+
+
+// let newArr = Shift([1, 2, 3, 4 , 5]);
+
+// console.log(newArr);
+
+//---------------------------------------------------------------------------------------------------------------
+/*
+Sort array (Ascending)
+Input: [5, 3, 1, 4] Output: [1, 3, 4, 5]
+ */
+
+let arr = [5,3,1,4]
+
+function Sort(){
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let temp = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = temp
+      }
+    }
   }
 
-  arr[0] = last;
-  return arr;
+return arr
 }
 
+let result = Sort();
 
-let newArr = Shift([1, 2, 3, 4 , 5]);
+console.log(result);
 
-console.log(newArr);
+
