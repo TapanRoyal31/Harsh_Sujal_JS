@@ -1,19 +1,26 @@
-// dom :- document object model
+// 1) getelementbyId
+// 2) getelementbyclassname
+// 3) queryselector
+// 4) queryselectorAll
 
-// document :- store html code as object
 
-/*
-    getElementById - return only first element
-    getElementbyClassName - return html collection
-    queryselector - return only first element (use css selectors)
-    querySelectorALL - return nodelist 
-*/
+// --------------------------------------------------------------------------
 
-// let par = document.getElementById('par');
-// console.log(par);
+// let id1 = document.getElementById('unique');
 
-// let par1 = document.getElementsByClassName('para');
-// console.log(par1);
+// console.log(id1);
 
-// let par = document.querySelectorAll('.para');
-// console.log(par);
+
+// id1.style.background = 'red';
+
+//----------------------------------------------------------------------------
+
+// let class1 = document.getElementsByClassName('paragraph');
+
+
+// console.log(class1);
+
+// for (let i = 0; i < class1.length; i++) {
+//     const element = class1[i];
+//     element.style.background = 'yellow';
+// }
