@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #212121;
+    }
+</style>
+<body>
+    <button id="btn" type="button">Submit</button>
+    <button id="reset" type="reset">Reset</button>
+</body>
+<script>
+    let btn = document.querySelector('#btn')
+    let rst = document.querySelector('#reset')
+
+    // function handleclick(){
+    //     btn.innerText = "Button click";
+    //     btn.style.color = 'red'
+    //     btn.style.fontSize = '24px'
+    //     btn.style.borderRadius = '10px';
+    // }
+
+    btn.addEventListener('click',function(){
+        alert('btn changed');
+        btn.innerText = "Button click";
+        btn.style.color = 'red';
+        btn.style.fontSize = '24px';
+        btn.style.borderRadius = '10px';
+        btn.style.background = 'transparent';
+    })
+
+    rst.addEventListener('click',function () {
+        alert('btn reset');
+        btn.innerText = 'submit';
+        btn.style.color = '';
+        btn.style.fontSize = '';
+        btn.style.borderRadius = '';
+        btn.style.background = '';
+    })
+
+</script>
+
+</html>

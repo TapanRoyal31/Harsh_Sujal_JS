@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <!-- before begin  -->
+    <p id="ele">
+        <!-- after begin  -->
+        Actual Element
+        <!-- before end  -->
+    </p>
+    <!-- after end  -->
+</body>
+<script>
+        let newEle = document.createElement('p')
+        newEle.innerText = 'New Element'
+
+        let Ele = document.querySelector('#ele');
+
+        Ele.insertAdjacentText("afterend",newEle);
+        // Ele.insertAdjacentElement("beforebegin",newEle);
+
+</script>
+</html>
