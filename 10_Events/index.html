@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <style>
+    /*
+        clientX and clientY measure the x and y cordinate when button was clicked/event called
+
+    
+    */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+    }
+    button {
+      padding: 10px;
+      font-family: "Courier New", Courier, monospace;
+      font-weight: 900;
+      border-radius: 10px;
+    }
+    .box {
+      display: flex;
+      gap: 20px;
+    }
+  </style>
+  <body>
+    <p>Press any color button for see the magic!!!</p>
+    <div class="box">
+      <button id="purple" type="button">Purple</button>
+      <button id="yellow" type="button">Yellow</button>
+      <button id="white" type="button">White</button>
+      <button id="green" type="button">Green</button>
+      <button id="blue" type="button">Blue</button>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
