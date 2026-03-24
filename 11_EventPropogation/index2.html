@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Example</title>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        #openBtn {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Overlay */
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Modal Box */
+        #modal {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="openBtn">Open Modal</button>
+
+    <div id="overlay">
+        <div id="modal">
+            <h3>Modal Content</h3>
+            <p>Click outside to close</p>
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById("openBtn");
+        const overlay = document.getElementById("overlay");
+        const modal = document.getElementById("modal");
+
+        // ✅ Open modal
+        openBtn.addEventListener("click", () => {
+            overlay.style.display = "flex";
+        });
+
+        // ✅ Close modal when clicking outside
+        overlay.addEventListener("click", () => {
+            overlay.style.display = "none";
+            console.log("Modal closed");
+        });
+
+        // ❌ Prevent closing when clicking inside modal
+        modal.addEventListener("click", (e) => {
+            e.stopPropagation(); // 🔥 MAIN CONCEPT
+            console.log("Inside modal clicked");
+        });
+    </script>
+
+</body>
+</html>
